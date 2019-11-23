@@ -1,0 +1,197 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,300,600);
+
+
+.menu{
+  background: red;
+  height: 50px;
+}
+
+
+
+
+
+body{
+  margin: 0;
+}
+
+#container{
+  background: white;
+  height: 680px;
+  position: relative;
+}
+
+.first-slide{
+  display: grid;
+  list-style: none;
+  grid-template-columns: auto auto;
+  padding: 100px;
+}
+
+.second-slide{
+  position: relative;
+}
+
+.profil-img{
+  display: block;
+  margin: auto;
+  width: 80%;
+  max-width: 400px;
+}
+
+.paysage-img{
+  max-height: 600px;
+  width: auto;
+  display: block;
+  margin: auto;
+  z-index: 1;
+}
+
+hr{
+  width:10%;
+  float:left;
+}
+
+.column{
+  text-align: left;
+}
+
+.column a{
+  padding: 10px;
+  border: 1px solid black;
+  font-size: 10px;
+}
+.column a:hover {
+  background: black;
+  color:white;
+}
+
+.info{
+  ;position: absolute;
+  background: #dededec9;
+  width: 40%;
+  left: 10%;
+  padding: 40px;
+}
+
+.info a{
+  padding: 10px;
+  border: 1px solid black;
+  font-size: 10px;
+}
+
+.info a:hover{
+  background: black;
+  color:white;
+}
+
+.slide-diseapper{
+  -webkit-animation: fade-in 250ms;
+  animation: fade-in 250ms;
+}
+
+.background-img{
+  background-image: url("./paysage.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 600px;
+}
+
+.slide-appear{
+  -webkit-animation: fade-out 350ms;
+  animation: fade-out 350ms;
+}
+
+.arrow {
+  box-sizing: border-box;
+  height: 5vw;
+  width: 5vw;
+  border-style: solid;
+  border-color: black;
+  border-width: 0px 1px 1px 0px;
+  transition:. border-width 150ms ease-in-out;
+  position: absolute;
+  top: 50%;
+}
+
+.arr-left{
+    left: 24px;
+    transform: rotate(135deg);
+    z-index: 3;
+}
+
+.arr-right{
+  right: 24px;
+  transform: rotate(317deg);
+  z-index: 3;
+}
+
+.arrow:hover {
+  border-bottom-width: 4px;
+  border-right-width: 4px;
+}
+
+@keyframes fade-in {
+  0% {
+      opacity: 1;
+ }
+ 100% {
+    opacity: 0;
+    display: none;
+ }
+}
+
+@keyframes fade-out {
+  0% {
+      opacity: 0;
+ }
+ 100% {
+    opacity: 1;
+    display: none;
+ }
+}
+
+@media (max-width: 1281px) {
+  #container{
+    height: 980px;
+  }
+
+  .first-slide{
+    display: grid;
+    grid-template-columns: auto;
+  }
+
+  .second-slide-wrapper{
+    position: inherit;
+  }
+
+  .column{
+    text-align: center;
+  }
+
+  hr{
+    float: inherit;
+  }
+
+  .info{
+    position: inherit;
+    margin: auto;
+    width: 100%;
+    text-align: center;
+    left:0;
+    padding: 100px;
+    width: 50%;
+    background: white;
+    text-align: center;
+  }
+
+  .paysage-img{
+    position: inherit;
+    width:100%;
+    margin-top: 45px;
+    height: 488px;
+  }
+
+  .profil-img{
+    margin-top: 45px;
+  }
+}
