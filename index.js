@@ -71,11 +71,12 @@ jQuery(document).ready(function ($) {
       if (Math.abs(diffX) > Math.abs(diffY)) {
         if (diffX > 0) {
           console.log("swiped left");
-          SlideLeft();
+           SlideRight();
         } else {
           // swiped right
           console.log("swiped right");
-           SlideRight();
+          SlideLeft();
+
         }
       } else {
         return
