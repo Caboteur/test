@@ -195,11 +195,3 @@ hr{
     margin-top: 45px;
   }
 }
-
-@media only screen and (min-width : 1824px) {
-   #container{
-     max-width:80%;
-     margin: auto;
-   }
-
-}
