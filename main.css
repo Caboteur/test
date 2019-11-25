@@ -220,6 +220,23 @@ hr{
     font-size: 27px;
   }
 
+  .info h1{
+    font-size: 40px;
+  }
+
+  .column h1{
+    font-size: 40px;
+  }
+
+  .info h2{
+    font-size: 30px;
+  }
+
+  .column h2{
+    font-size: 30px;
+  }
+
+
   .info a{
     font-size: 25px;
   }
