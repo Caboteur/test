@@ -1,22 +1,22 @@
 jQuery(document).ready(function ($) {
 
-    var BtnRight = $('.arr-right');
-    var BtnLeft = $('.arr-left');
+    var BtnRight = $('.sl-arr-right');
+    var BtnLeft = $('.sl-arr-left');
 
     function SlideRight(){
-      $( ".first-slide" ).replaceWith( '<div class="second-slide slide-appear"><div class="second-slide-wrapper"><div class="info"><h2>PHOTO REPORTER</h2><h1>PHOTO-JOURNALISTE</h1><hr></hr></br><p>Photographe corporate, je traduis efficacement et esthétiquement en images les messages et les idées des entreprises à travers des portraits de leurs collaborateurs et de leurs dirigeants. Jinterviens au sein de lentreprise ou lors dévénements pour des portraits déquipe comme pour des photos individuelles. Je pratique la <b>photographie en entreprise</b> depuis plus de 20 ans et je suis basé en région parisienne</p><a>DECOUVRIR MES PORTRAITS CORPORTATE</a></div><div class="background-img"></div></div></div>' );
+      $( ".sl-first-slide" ).replaceWith( '<div class="sl-second-slide sl-slide-appear"><div class="sl-second-slide-wrapper"><div class="sl-info"><h2>PHOTO REPORTER</h2><h1>PHOTO-JOURNALISTE</h1><hr class="sl-hr"></hr></br><p>Photographe corporate, je traduis efficacement et esthétiquement en images les messages et les idées des entreprises à travers des portraits de leurs collaborateurs et de leurs dirigeants. Jinterviens au sein de lentreprise ou lors dévénements pour des portraits déquipe comme pour des photos individuelles. Je pratique la <b>photographie en entreprise</b> depuis plus de 20 ans et je suis basé en région parisienne</p><a>DECOUVRIR MES PORTRAITS CORPORTATE</a></div><div class="sl-background-img alt="photo reporter"></div></div></div>' );
 
     }
 
     function SlideLeft(){
-      $( ".second-slide" ).replaceWith( '   <div class="first-slide slide-appear"><li><div class="column"><h2>PHOTOGRAPHE PROFESSIONNEL A PARIS</h2><h1>PHOTOGRAPHE CORPORATE</h1><p>Photographe corporate, je traduis efficacement et esthétiquement en images les messages et les idées des entreprises à travers des portraits de leurs collaborateurs et de leurs dirigeants. Jinterviens au sein de lentreprise ou lors dévénements pour des portraits déquipe comme pour des photos individuelles. Je pratique la <b>photographie en entreprise</b> depuis plus de 20 ans et je suis basé en région parisienne</p><a>DECOUVRIR MES PORTRAITS CORPORTATE</a></div></li><li><div class="column"><img class="profil-img" src="./sportrait.jpg"></img></div></li></div>')
+      $( ".sl-second-slide" ).replaceWith( '   <div class="sl-first-slide slide-appear"><li><div class="sl-column"><h2>PHOTOGRAPHE PROFESSIONNEL A PARIS</h2><h1>PHOTOGRAPHE CORPORATE</h1><p>Photographe corporate, je traduis efficacement et esthétiquement en images les messages et les idées des entreprises à travers des portraits de leurs collaborateurs et de leurs dirigeants. Jinterviens au sein de lentreprise ou lors dévénements pour des portraits déquipe comme pour des photos individuelles. Je pratique la <b>photographie en entreprise</b> depuis plus de 20 ans et je suis basé en région parisienne</p><a>DECOUVRIR MES PORTRAITS CORPORTATE</a></div></li><li><div class="sl-column"><img class="sl-profil-img" src="./sportrait.jpg"></img></div></li></div>')
     }
 
 
 
 
   var swipe = false;
-  var container = document.querySelector("#container");
+  var container = document.querySelector("#sl-container");
 
     container.addEventListener("touchstart", startTouch, false);
     container.addEventListener("touchmove", moveTouch, false);
@@ -82,7 +82,7 @@ jQuery(document).ready(function ($) {
         clearInterval(identity);
       } else {
         width++ ;
-          $('.progress').css({width:width + '%'});
+          $('.sl-progress').css({width:width + '%'});
       }
     }
   }

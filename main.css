@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css?family=Lato&display=swap');
 
-.menu{
+.sl-menu{
   background: red;
   height: 50px;
 }
@@ -9,32 +9,32 @@ body{
   margin: 0;
 }
 
-#container{
+#sl-container{
   background: white;
   height: 680px;
   position: relative;
   font-family: 'Lato', sans-serif;
 }
 
-.first-slide{
+.sl-first-slide{
   display: grid;
   list-style: none;
   grid-template-columns: auto auto;
   padding: 100px;
 }
 
-.second-slide{
+.sl-second-slide{
   position: relative;
 }
 
-.profil-img{
+.sl-profil-img{
   display: block;
   margin: auto;
   width: 80%;
   max-width: 400px;
 }
 
-.paysage-img{
+.sl-paysage-img{
   max-height: 600px;
   width: auto;
   display: block;
@@ -42,67 +42,86 @@ body{
   z-index: 1;
 }
 
-hr{
+.sl-hr{
   width:10%;
   float:left;
+  border: 1px solid #0000003d;
 }
 
-.column{
+.sl-column{
   text-align: left;
 }
 
-.column a{
-  padding: 10px;
-  border: 1px solid black;
+.sl-column a{
+  padding: 20px;
+  border: 1px solid #00000038;
   font-size: 10px;
+  color: #00000038;
 }
-.column a:hover {
+.sl-column a:hover {
   background: black;
   color:white;
 }
 
-.column p{
+.sl-column p{
   line-height: 1.5;
-  margin-bottom: 5%;
+  margin-bottom: 10%;
 }
 
-.info{
-  ;position: absolute;
+.sl-info{
+  position: absolute;
   background: #dededec9;
   width: 30%;
   left: 10%;
   padding: 40px;
 }
 
-.info a{
-  padding: 10px;
-  border: 1px solid black;
-  font-size: 10px;
+.sl-info p{
+  line-height: 1.5;
+  margin-bottom: 10%;
 }
 
-.info a:hover{
+.sl-info a{
+  padding: 20px;
+  border: 1px solid #00000038;;
+  font-size: 10px;
+  color: #00000038;
+}
+
+.sl-info a:hover{
   background: black;
   color:white;
 }
 
-.slide-diseapper{
+.sl-column h2{
+  font-size: 1em;
+  color: #00000038;
+}
+.sl-info h2{
+  font-size: 1em;
+  color: #00000038;
+}
+
+.sl-slide-diseapper{
   -webkit-animation: fade-in 250ms;
   animation: fade-in 250ms;
 }
 
-.background-img{
+.sl-background-img{
   background-image: url("./paysage.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   height: 600px;
 }
 
-.slide-appear{
+.sl-slide-appear{
   -webkit-animation: fade-out 350ms;
   animation: fade-out 350ms;
 }
 
-.arrow {
+
+/*  Flèches optionelles
+.sl-arrow {
   box-sizing: border-box;
   height: 5vw;
   width: 5vw;
@@ -120,18 +139,19 @@ hr{
     z-index: 3;
 }
 
-.arr-right{
+.sl-arr-right{
   right: 24px;
   transform: rotate(317deg);
   z-index: 3;
 }
 
-.arrow:hover {
+.sl-arrow:hover {
   border-bottom-width: 4px;
   border-right-width: 4px;
 }
+*/
 
-.progress-bar {
+.sl-progress-bar {
   border-radius: 60px;
   overflow: hidden;
   width: 100%;
@@ -139,17 +159,17 @@ hr{
   left: 50%;
   bottom: 0;
 }
-.progress-bar span {
+.sl-progress-bar span {
   display: block;
 }
 
-.bar {
+.sl-bar {
   background: rgba(0, 0, 0, 0.075);
   width: 20%;
   margin: auto;
 }
 
-.progress {
+.sl-progress {
   -webkit-animation: loader 8s ease infinite;
           animation: loader 8s ease infinite;
   background: #a9a9a9;
@@ -158,7 +178,7 @@ hr{
   width: 0;
 }
 
-.progress-bar {
+.sl-progress-bar {
   -webkit-transform: translate3d(-50%, -50%, 0);
           transform: translate3d(-50%, -50%, 0);
           width: 50%;
@@ -177,39 +197,31 @@ hr{
  }
 }
 
-@keyframes fade-out {
-  0% {
-      opacity: 0;
- }
- 100% {
-    opacity: 1;
-    display: none;
- }
-}
+
 
 @media (max-width: 1281px) {
-  #container{
+  #sl-container{
     height: 980px;
   }
 
-  .first-slide{
+  .sl-first-slide{
     display: grid;
     grid-template-columns: auto;
   }
 
-  .second-slide-wrapper{
+  .sl-second-slide-wrapper{
     position: inherit;
   }
 
-  .column{
+  .sl-column{
     text-align: center;
   }
 
-  hr{
+  .sl-hr{
     float: inherit;
   }
 
-  .info{
+  .sl-info{
     position: initial;
     margin: auto;
     width: auto;
@@ -217,46 +229,48 @@ hr{
     padding: 100px;
     background: white;
     text-align: center;
-    font-size: 27px;
+    font-size: 1.7em;
   }
 
-  .info h1{
+  .sl-info h1{
+    font-size: 40px
+  }
+
+  .sl-column h1{
     font-size: 40px;
   }
 
-  .column h1{
-    font-size: 40px;
+  .sl-info h2{
+    font-size: 16px;
+    color: #00000038;
   }
 
-  .info h2{
-    font-size: 30px;
-  }
-
-  .column h2{
-    font-size: 30px;
+  .sl-column h2{
+    font-size: 16px;
+    color: #00000038;
   }
 
 
-  .info a{
-    font-size: 25px;
+  .sl-info a{
+    font-size: 20px;
   }
 
-  .column p{
+  .sl-column p{
     font-size: 27px;
   }
 
-  .column a{
-    font-size: 25px;
+  .sl-column a{
+    font-size: 20px;
   }
 
-  .paysage-img{
+  .sl-paysage-img{
     position: inherit;
     width:100%;
     margin-top: 45px;
     height: 488px;
   }
 
-  .profil-img{
-    margin-top: 45px;
+  .sl-profil-img{
+    padding-top: 10%;
   }
 }
