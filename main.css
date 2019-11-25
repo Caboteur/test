@@ -199,7 +199,7 @@ body{
 
 
 
-@media (max-width: 1281px) {
+@media (max-width: 1024px) {
   #sl-container{
     height: 980px;
   }
