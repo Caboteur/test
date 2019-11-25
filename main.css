@@ -271,7 +271,7 @@ body{
   }
 
   .sl-progress-bar{
-    position: inherit;
+    position: absolute;
     margin: auto;
     display: inline-block;
     padding-top: 20px;

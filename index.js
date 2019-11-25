@@ -81,8 +81,7 @@ jQuery(document).ready(function ($) {
 
   function update() {
     console.log(isRunning)
-    width = 0;
-
+      width = 0;
     var identity = setInterval(scene, 80);
       if (isRunning == true){
           clearInterval(identity);
@@ -98,13 +97,10 @@ jQuery(document).ready(function ($) {
            side = 1;
            SlideLeft();
          }
-
       } else {
         isRunning = true;
-
-        width++ ;
+          width++ ;
           $('.sl-progress').css({width:width + '%'});
-
       }
     }
   }
@@ -113,5 +109,8 @@ jQuery(document).ready(function ($) {
 
 
   var hauteurTotaleElem = document.getElementById("sl-container").offsetHeight;
+  console.log(hauteurTotaleElem)
   $('#sl-container').css({height:hauteurTotaleElem});
+
+
 });
