@@ -65,10 +65,15 @@ hr{
   color:white;
 }
 
+.column p{
+  line-height: 1.5;
+  margin-bottom: 5%;
+}
+
 .info{
   ;position: absolute;
   background: #dededec9;
-  width: 40%;
+  width: 30%;
   left: 10%;
   padding: 40px;
 }
@@ -130,6 +135,42 @@ hr{
   border-right-width: 4px;
 }
 
+.progress-bar {
+  border-radius: 60px;
+  overflow: hidden;
+  width: 100%;
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+}
+.progress-bar span {
+  display: block;
+}
+
+.bar {
+  background: rgba(0, 0, 0, 0.075);
+  width: 20%;
+  margin: auto;
+}
+
+.progress {
+  -webkit-animation: loader 8s ease infinite;
+          animation: loader 8s ease infinite;
+  background: #a9a9a9;
+  color: #fff;
+  padding: 1px;
+  width: 0;
+}
+
+.progress-bar {
+  -webkit-transform: translate3d(-50%, -50%, 0);
+          transform: translate3d(-50%, -50%, 0);
+          width: 50%;
+          margin: auto;
+          display: inline;
+}
+
+
 @keyframes fade-in {
   0% {
       opacity: 1;
@@ -182,6 +223,14 @@ hr{
     width: 50%;
     background: white;
     text-align: center;
+  }
+
+  .column p{
+    font-size: 27px;
+  }
+
+  .column a{
+    font-size: 25px;
   }
 
   .paysage-img{

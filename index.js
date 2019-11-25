@@ -1,33 +1,10 @@
 jQuery(document).ready(function ($) {
 
-
-
-
     var BtnRight = $('.arr-right');
     var BtnLeft = $('.arr-left');
 
-    function SlideRigh() {
-      $('.first-slide').addClass('slide-diseapper');
-      setTimeout(function(){
-          $('.second-slide').css({display:"grid" });
-        $('.first-slide').css({display:"none" });
-        $('.second-slide').addClass('slide-appear');
-      }, 250);
-    }
-
-    function SlideLef(){
-      $('.first-slide').removeClass('slide-diseapper');
-      $('.first-slide').removeClass('slide-appear');
-      $('.second-slide').addClass('slide-diseapper');
-      setTimeout(function(){
-        $('.second-slide').css({display:"none" });
-          $('.first-slide').css({display:"grid" });
-        $('.first-slide').addClass('slide-appear');
-      }, 250);
-    }
-
     function SlideRight(){
-      $( ".first-slide" ).replaceWith( '<div class="second-slide slide-appear"><div class="second-slide-wrapper"><div class="info"><h2>PHOTOGRAPHE PROFESSIONNEL A PARIS</h2><h1>PHOTOGRAPHE CORPORATE</h1><p>Photographe corporate, je traduis efficacement et esthétiquement en images les messages et les idées des entreprises à travers des portraits de leurs collaborateurs et de leurs dirigeants. Jinterviens au sein de lentreprise ou lors dévénements pour des portraits déquipe comme pour des photos individuelles. Je pratique la <b>photographie en entreprise</b> depuis plus de 20 ans et je suis basé en région parisienne</p><a>DECOUVRIR MES PORTRAITS CORPORTATE</a></div><div class="background-img"></div></div></div>' );
+      $( ".first-slide" ).replaceWith( '<div class="second-slide slide-appear"><div class="second-slide-wrapper"><div class="info"><h2>PHOTO REPORTER</h2><h1>PHOTO-JOURNALISTE</h1><hr></hr></br><p>Photographe corporate, je traduis efficacement et esthétiquement en images les messages et les idées des entreprises à travers des portraits de leurs collaborateurs et de leurs dirigeants. Jinterviens au sein de lentreprise ou lors dévénements pour des portraits déquipe comme pour des photos individuelles. Je pratique la <b>photographie en entreprise</b> depuis plus de 20 ans et je suis basé en région parisienne</p><a>DECOUVRIR MES PORTRAITS CORPORTATE</a></div><div class="background-img"></div></div></div>' );
 
     }
 
@@ -88,17 +65,32 @@ jQuery(document).ready(function ($) {
       e.preventDefault();
     };
 
-    BtnRight.click(function() {
+    BtnRight.click(()=> {
       SlideRight();
   });
 
-
-
-  BtnLeft.click(function() {
+  BtnLeft.click(()=> {
     SlideLeft();
   });
 
+  function update() {
+
+    var width = 0;
+    var identity = setInterval(scene, 60);
+    function scene() {
+      if (width >= 100) {
+        clearInterval(identity);
+      } else {
+        width++ ;
+          $('.progress').css({width:width + '%'});
+      }
+    }
+  }
+  update();
 
 
+  setInterval(function(){
+    update();
+  }, 6000);
 
 });
