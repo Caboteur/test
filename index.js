@@ -97,7 +97,7 @@ jQuery(document).ready(function ($) {
   }, 8000);
   setInterval(function(){
     SlideLeft();
-  }, 8000);
+  }, 16000);
 
   var hauteurTotaleElem = document.getElementById("sl-container").offsetHeight;
   console.log(hauteurTotaleElem);
