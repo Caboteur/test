@@ -1,10 +1,5 @@
 @import url('https://fonts.googleapis.com/css?family=Lato&display=swap');
 
-.sl-menu{
-  background: red;
-  height: 50px;
-}
-
 body{
   margin: 0;
 }
@@ -115,8 +110,8 @@ body{
 }
 
 .sl-slide-appear{
-  -webkit-animation: fade-out 350ms;
-  animation: fade-out 350ms;
+  -webkit-animation: fade-in 450ms;
+  animation: fade-in 850ms;
 }
 
 
@@ -189,10 +184,10 @@ body{
 
 @keyframes fade-in {
   0% {
-      opacity: 1;
+      opacity: 0;
  }
  100% {
-    opacity: 0;
+    opacity: 1;
     display: none;
  }
 }
@@ -201,7 +196,7 @@ body{
 
 @media (max-width: 1024px) {
   #sl-container{
-    height: 980px;
+    height: auto;
   }
 
   .sl-first-slide{
@@ -272,5 +267,12 @@ body{
 
   .sl-profil-img{
     padding-top: 10%;
+  }
+
+  .sl-progress-bar{
+    position: inherit;
+    margin: auto;
+    display: inline-block;
+    padding-top: 20px;
   }
 }
