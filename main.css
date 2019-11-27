@@ -299,3 +299,17 @@ body{
     padding-top: 20px;
   }
 }
+
+@media  (min-width : 1080px) {
+  .sl-background-img {
+    background-position: center;
+  }
+
+  .sl-slide-appear li{
+    margin: auto;
+  }
+
+  .sl-profil-img {
+    max-width: 320px;
+}
+}
