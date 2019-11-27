@@ -1,7 +1,7 @@
 jQuery(document).ready(function ($) {
 
-    var BtnRight = $('.sl-arr-right');
-    var BtnLeft = $('.sl-arr-left');
+    var BtnRight = $('.arr-right');
+    var BtnLeft = $('.arr-left');
     var side = 1;
     var width = 0;
     var isRunning = false;
@@ -9,12 +9,26 @@ jQuery(document).ready(function ($) {
     function SlideRight(){
        $('.sl-first-slide').css({display:'none'});
        $('.sl-second-slide').css({display:'inherit'});
-       update();
+       if (window.matchMedia("(min-width: 1024px)").matches) {
+         var hauteurTotaleElem = document.getElementById("sl-container").offsetHeight;
+         console.log(hauteurTotaleElem)
+         $('#sl-container').css({height:hauteurTotaleElem});
+       } else {
+         $('#sl-container').height($('#sl-container').height() + 80);
+       }
+        update();
     }
 
     function SlideLeft(){
       $('.sl-first-slide').css({display:'grid'});
       $('.sl-second-slide').css({display:'none'});
+      if (window.matchMedia("(min-width: 1024px)").matches) {
+        var hauteurTotaleElem = document.getElementById("sl-container").offsetHeight;
+         console.log(hauteurTotaleElem)
+        $('#sl-container').css({height:hauteurTotaleElem});
+      } else {
+          $('#sl-container').css({height:'auto'});
+      }
       update();
     }
 
@@ -71,21 +85,25 @@ jQuery(document).ready(function ($) {
       e.preventDefault();
     };
 
-  BtnRight.click(()=> {
+  BtnRight.click(function rd() {
     SlideRight();
-  });
+    console.log("right")
+  }
+);
 
-  BtnLeft.click(()=> {
+  BtnLeft.click(function(){
     SlideLeft();
   });
 
   function update() {
+
     console.log(isRunning)
       width = 0;
-    var identity = setInterval(scene, 80);
+    var identity = setInterval(scene, 140);
       if (isRunning == true){
           clearInterval(identity);
       }
+            clearInterval(identity);
     function scene() {
       if (width >= 100 ) {
         isRunning = false;
@@ -105,12 +123,5 @@ jQuery(document).ready(function ($) {
     }
   }
   update();
-
-
-
-  var hauteurTotaleElem = document.getElementById("sl-container").offsetHeight;
-  console.log(hauteurTotaleElem)
-  $('#sl-container').css({height:hauteurTotaleElem});
-
 
 });
